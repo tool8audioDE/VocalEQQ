@@ -58,8 +58,11 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
       nicht per Bildschirm bedient (Zugriff im Sitzungsverlauf abgelehnt);
       die Oberfläche ist nur per `vocaleqq-snapshot` offscreen geprüft.
 - [ ] **Hörtest** gegen das Python-Ergebnis an eigenen Takes.
-- [ ] GitHub-Repo `tool8audioDE/VocalEQQ` anlegen und pushen (öffentlich,
-      AGPL verlangt den Quellcode) — **noch nicht geschehen**.
+- [x] **Erledigt 2026-09-26:** öffentliches Repo
+      https://github.com/tool8audioDE/VocalEQQ angelegt und gepusht.
+- [ ] **Keyy ist privat** (Stand 2026-09-26, `tool8audioDE` hatte 0
+      öffentliche Repos), obwohl sein README den öffentlichen Quellcode als
+      Grund für die AGPLv3 nennt. Vor der Verteilung öffentlich stellen.
 - [ ] Release-Paket für die Website (ZIP mit VST3, Standalone, LICENSE,
       Kurzanleitung), Seite `tool8.online/vocaleqq`.
 - [ ] Beobachten: Der De-Esser erkennt (wie das Vorbild) nicht jeden
