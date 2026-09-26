@@ -63,8 +63,16 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 - [ ] **Keyy ist privat** (Stand 2026-09-26, `tool8audioDE` hatte 0
       öffentliche Repos), obwohl sein README den öffentlichen Quellcode als
       Grund für die AGPLv3 nennt. Vor der Verteilung öffentlich stellen.
-- [ ] Release-Paket für die Website (ZIP mit VST3, Standalone, LICENSE,
-      Kurzanleitung), Seite `tool8.online/vocaleqq`.
+- [x] **Erledigt 2026-09-26:** Download-Paket per `tools/package.ps1`
+      (`dist/VocalEQQ-1.0.0-win64.zip`, 5,4 MB). Laufzeit jetzt statisch —
+      vorher hingen App und Plugin an MSVCP140/VCRUNTIME140.
+- [ ] **Avast hat beim Probe-Entpacken wohl die unsignierte `Vocal EQQ.exe`
+      entfernt** (im Temp-Ordner fehlte sie, die Avast-Quarantäne wurde zur
+      selben Minute geändert; nicht bestätigt, Quarantäne nicht lesbar).
+      Vor dem Upload klären: Quarantäne ansehen, ggf. als Fehlalarm an Avast
+      melden und das ZIP bei VirusTotal prüfen. Dauerhaft hilft nur eine
+      Code-Signatur. Keyy ist vermutlich genauso betroffen.
+- [ ] Download-Seite `tool8.online/vocaleqq`.
 - [ ] Beobachten: Der De-Esser erkennt (wie das Vorbild) nicht jeden
       Rahmen eines Zischlauts — an einem Kunstsignal ~4 statt 6 dB.
       Falls es beim Hören auffällt, an der Erkennung ansetzen, nicht an

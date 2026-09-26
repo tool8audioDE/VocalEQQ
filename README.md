@@ -113,7 +113,19 @@ build-dsp\Release\vocaleqq-cli take.wav --no-comp --strength 1 --low-cut 5
 
 Die Ausgabe liegt sample-genau auf dem Eingang (Latenz ausgeglichen).
 
-### 3. Screenshot der Oberfläche
+### 3. Download-Paket bauen
+
+```bat
+powershell -ExecutionPolicy Bypass -File tools\package.ps1
+```
+
+Frischer Release-Bau in `build-release`, dann `dist\VocalEQQ-<Version>-win64.zip`
+mit VST3, Standalone, englischer Anleitung (`packaging/README.txt`) und
+Lizenz, dazu eine SHA256-Datei. Die Laufzeitbibliothek ist statisch
+eingebunden: Plugin und App brauchen kein Visual-C++-Paket auf dem
+Zielrechner.
+
+### 4. Screenshot der Oberfläche
 
 ```bat
 cmake -B build -DVOCALEQQ_BUILD_SNAPSHOT=ON

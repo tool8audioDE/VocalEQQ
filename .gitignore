@@ -4,3 +4,4 @@ testdata/
 __pycache__/
 *.pyc
 *.wav
+dist/
