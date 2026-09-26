@@ -83,3 +83,27 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 - [ ] Später: Keyy auf `Tool8LookAndFeel` umstellen, damit beide gleich
       aussehen; Presets; Schwellen-Zustand im Projekt speichern (spart das
       Neu-Lernen nach dem Laden).
+
+## Technische Details
+
+| Zweck | Befehl / Ort |
+|---|---|
+| DSP, CLI, Tests (ohne JUCE) | `cmake -B build-dsp -DVOCALEQQ_BUILD_PLUGIN=OFF -DFETCHCONTENT_SOURCE_DIR_CATCH2=../Voxx/build/_deps/catch2-src`, dann `build-dsp\Releaseocaleqq-tests` |
+| Plugin für die Entwicklung | `build/` mit `-DFETCHCONTENT_SOURCE_DIR_JUCE=../Voxx/build/_deps/juce-src` |
+| Download-Paket | `tools\package.ps1` → `build-release/`, `dist/VocalEQQ-<Version>-win64.zip` |
+| Oberfläche als PNG | `-DVOCALEQQ_BUILD_SNAPSHOT=ON`, `vocaleqq-snapshot <datei.png> [--bypass]` |
+
+**Oberfläche prüfen ohne Bildschirmzugriff:** `vocaleqq-snapshot` rendert
+das Fenster offscreen mit einem Testsignal (Resonanz bei 2,8 kHz). So ist
+auch `docs/screenshot.png` entstanden.
+
+**Messung gegen Python wiederholen.** Die Vergleichsskripte lagen nur im
+Scratchpad der Sitzung und sind weg; das Verfahren: mit
+`../ai-vocal-eq/venv/Scripts/python.exe` dieselbe Datei durch
+`processor.apply_dynamic_eq`, `deess.deess` bzw. `compressor._gain_curve`
+schicken und mit `vocaleqq-cli <in> <out> --no-… --no-auto-gain` vergleichen
+(Bandpegel 60 Hz–16 kHz, Pegelverlauf je 10 bzw. 100 ms, nur Stellen über
+−45 dBFS). Die Python-Ausgabe liegt ohne Latenz, die CLI gleicht ihre aus.
+
+**Avast** entfernt unsignierte neue EXEs außerhalb von `Selfmade\*` (dort
+hat der Nutzer eine Ausnahme). Probestarts deshalb innerhalb von Selfmade.
