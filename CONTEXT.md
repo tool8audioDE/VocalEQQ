@@ -72,6 +72,9 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
       entpackt bleibt die EXE erhalten und die App startet. **Auf fremden
       Rechnern gilt die Ausnahme nicht** — vor dem Upload das ZIP bei
       VirusTotal prüfen; dauerhaft hilft nur eine Code-Signatur.
+- [x] **VirusTotal (2026-09-26):** `VocalEQQ-1.0.0-win64.zip` 0 Treffer.
+      Kann sich ändern, solange die EXE unsigniert und neu ist — bei
+      Meldungen von Nutzern als Fehlalarm beim Hersteller melden.
 - [ ] Download-Seite `tool8.online/vocaleqq`.
 - [ ] Beobachten: Der De-Esser erkennt (wie das Vorbild) nicht jeden
       Rahmen eines Zischlauts — an einem Kunstsignal ~4 statt 6 dB.
