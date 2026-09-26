@@ -66,12 +66,12 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 - [x] **Erledigt 2026-09-26:** Download-Paket per `tools/package.ps1`
       (`dist/VocalEQQ-1.0.0-win64.zip`, 5,4 MB). Laufzeit jetzt statisch —
       vorher hingen App und Plugin an MSVCP140/VCRUNTIME140.
-- [ ] **Avast hat beim Probe-Entpacken wohl die unsignierte `Vocal EQQ.exe`
-      entfernt** (im Temp-Ordner fehlte sie, die Avast-Quarantäne wurde zur
-      selben Minute geändert; nicht bestätigt, Quarantäne nicht lesbar).
-      Vor dem Upload klären: Quarantäne ansehen, ggf. als Fehlalarm an Avast
-      melden und das ZIP bei VirusTotal prüfen. Dauerhaft hilft nur eine
-      Code-Signatur. Keyy ist vermutlich genauso betroffen.
+- [x] **Avast (2026-09-26):** Beim Probe-Entpacken im Temp-Ordner fehlte
+      die unsignierte `Vocal EQQ.exe` danach, vermutlich von Avast entfernt.
+      Der Nutzer hat eine Ausnahme für `Selfmade\*` eingerichtet; dort
+      entpackt bleibt die EXE erhalten und die App startet. **Auf fremden
+      Rechnern gilt die Ausnahme nicht** — vor dem Upload das ZIP bei
+      VirusTotal prüfen; dauerhaft hilft nur eine Code-Signatur.
 - [ ] Download-Seite `tool8.online/vocaleqq`.
 - [ ] Beobachten: Der De-Esser erkennt (wie das Vorbild) nicht jeden
       Rahmen eines Zischlauts — an einem Kunstsignal ~4 statt 6 dB.
