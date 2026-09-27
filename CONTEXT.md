@@ -1,6 +1,6 @@
 # Projekt-Kontext: Vocal EQQ
 
-_Zuletzt aktualisiert: 2026-09-26_
+_Zuletzt aktualisiert: 2026-09-27_
 
 Für den Einstieg in eine neue Sitzung. Wiederholt **nicht**, was im
 `README.md` steht (Bauen, Benutzen, Messwerte), sondern was sonst verloren
@@ -53,7 +53,7 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 
 ## Offen / nächste Schritte
 
-- [ ] **In FL Studio testen**: laden, Latenzausgleich, Automation, Speichern
+- [x] **Erledigt 2026-09-27: vom Nutzer in FL Studio getestet, läuft einwandfrei.** Ursprünglich geplant: laden, Latenzausgleich, Automation, Speichern
       im Projekt, Bypass, Mono-Spur. Das Standalone wurde gebaut, aber noch
       nicht per Bildschirm bedient (Zugriff im Sitzungsverlauf abgelehnt);
       die Oberfläche ist nur per `vocaleqq-snapshot` offscreen geprüft.
@@ -75,7 +75,7 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 - [x] **VirusTotal (2026-09-26):** `VocalEQQ-1.0.0-win64.zip` 0 Treffer.
       Kann sich ändern, solange die EXE unsigniert und neu ist — bei
       Meldungen von Nutzern als Fehlalarm beim Hersteller melden.
-- [ ] Download-Seite `tool8.online/vocaleqq`.
+- [x] **Erledigt 2026-09-27:** Release 1.0.0 (Tag `v1.0.0`) auf `tool8.online/vocaleqq` mit Hover-Clip; ZIP per `tooL8/vertrieb/pack-release.py`, SHA256 C2709A1A…3D1E.
 - [ ] Beobachten: Der De-Esser erkennt (wie das Vorbild) nicht jeden
       Rahmen eines Zischlauts — an einem Kunstsignal ~4 statt 6 dB.
       Falls es beim Hören auffällt, an der Erkennung ansetzen, nicht an
