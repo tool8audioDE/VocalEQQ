@@ -91,11 +91,11 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 
 | Zweck | Befehl / Ort |
 |---|---|
-| DSP, CLI, Tests (ohne JUCE) | `cmake -B build-dsp -DVOCALEQQ_BUILD_PLUGIN=OFF -DFETCHCONTENT_SOURCE_DIR_CATCH2=../Voxx/build/_deps/catch2-src`, dann `build-dsp\Releaseocaleqq-tests` |
+| DSP, CLI, Tests (ohne JUCE) | `cmake -B build-dsp -DVOCALEQQ_BUILD_PLUGIN=OFF -DFETCHCONTENT_SOURCE_DIR_CATCH2=../Voxx/build/_deps/catch2-src`, dann `build-dsp\Release\vocaleqq-tests` |
 | Plugin für die Entwicklung | `build/` mit `-DFETCHCONTENT_SOURCE_DIR_JUCE=../Voxx/build/_deps/juce-src` |
 | Download-Paket | `tools\package.ps1` → `build-release/`, `dist/VocalEQQ-<Version>-win64.zip` |
 | Neue Version veröffentlichen | Checkliste „Pro Release“ in `tooL8/vertrieb/downloads.md` (Tag, `pack-release.py`, `plugins.ts`, Push = Deploy) |
-| Lokal installiert (zum Testen in FL) | `C:\Program Files\Common Files\VST3	ooL8\Vocal EQQ.vst3` — bei neuer Version ersetzen |
+| Lokal installiert (zum Testen in FL) | `C:\Program Files\Common Files\VST3\tooL8\Vocal EQQ.vst3` — bei neuer Version ersetzen |
 | Oberfläche als PNG | `-DVOCALEQQ_BUILD_SNAPSHOT=ON`, `vocaleqq-snapshot <datei.png> [--bypass]` |
 
 **Oberfläche prüfen ohne Bildschirmzugriff:** `vocaleqq-snapshot` rendert
