@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — unveröffentlicht
+## 1.0.0 — 2026-09-27
 
 Erste Fassung als Plugin, portiert aus dem Python-Werkzeug `ai-vocal-eq`.
 

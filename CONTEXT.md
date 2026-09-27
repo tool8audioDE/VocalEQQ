@@ -53,16 +53,13 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 
 ## Offen / nächste Schritte
 
-- [x] **Erledigt 2026-09-27: vom Nutzer in FL Studio getestet, läuft einwandfrei.** Ursprünglich geplant: laden, Latenzausgleich, Automation, Speichern
-      im Projekt, Bypass, Mono-Spur. Das Standalone wurde gebaut, aber noch
-      nicht per Bildschirm bedient (Zugriff im Sitzungsverlauf abgelehnt);
-      die Oberfläche ist nur per `vocaleqq-snapshot` offscreen geprüft.
+- [x] **Erledigt 2026-09-27:** vom Nutzer in FL Studio getestet, läuft
+      einwandfrei (dieselbe Binary wie im Release-ZIP).
 - [ ] **Hörtest** gegen das Python-Ergebnis an eigenen Takes.
 - [x] **Erledigt 2026-09-26:** öffentliches Repo
       https://github.com/tool8audioDE/VocalEQQ angelegt und gepusht.
-- [ ] **Keyy ist privat** (Stand 2026-09-26, `tool8audioDE` hatte 0
-      öffentliche Repos), obwohl sein README den öffentlichen Quellcode als
-      Grund für die AGPLv3 nennt. Vor der Verteilung öffentlich stellen.
+- [x] **Erledigt (geprüft 2026-09-27):** Keyy und Masterr sind auf GitHub
+      öffentlich.
 - [x] **Erledigt 2026-09-26:** Download-Paket per `tools/package.ps1`
       (`dist/VocalEQQ-1.0.0-win64.zip`, 5,4 MB). Laufzeit jetzt statisch —
       vorher hingen App und Plugin an MSVCP140/VCRUNTIME140.
@@ -76,6 +73,12 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
       Kann sich ändern, solange die EXE unsigniert und neu ist — bei
       Meldungen von Nutzern als Fehlalarm beim Hersteller melden.
 - [x] **Erledigt 2026-09-27:** Release 1.0.0 (Tag `v1.0.0`) auf `tool8.online/vocaleqq` mit Hover-Clip; ZIP per `tooL8/vertrieb/pack-release.py`, SHA256 C2709A1A…3D1E.
+- [ ] **Test auf einem fremden Rechner** (ohne Entwicklungsumgebung und
+      ohne Avast-Ausnahme): ZIP laden, installieren, FL-Scan.
+- [ ] **YouTube-Video:** wenn online, `youtubeId` + `videoThumb` in
+      `tooL8/website/src/data/plugins.ts` eintragen.
+- [ ] Idee, nicht entschieden: Bypass-Knopf ist missverständlich (an =
+      Original hören). Evtl. umbenennen („Original“) — Nutzer fragen.
 - [ ] Beobachten: Der De-Esser erkennt (wie das Vorbild) nicht jeden
       Rahmen eines Zischlauts — an einem Kunstsignal ~4 statt 6 dB.
       Falls es beim Hören auffällt, an der Erkennung ansetzen, nicht an
@@ -91,6 +94,8 @@ Muster von Keyy (doppeltes Y): **Vocal EQQ**, doppeltes Q.
 | DSP, CLI, Tests (ohne JUCE) | `cmake -B build-dsp -DVOCALEQQ_BUILD_PLUGIN=OFF -DFETCHCONTENT_SOURCE_DIR_CATCH2=../Voxx/build/_deps/catch2-src`, dann `build-dsp\Releaseocaleqq-tests` |
 | Plugin für die Entwicklung | `build/` mit `-DFETCHCONTENT_SOURCE_DIR_JUCE=../Voxx/build/_deps/juce-src` |
 | Download-Paket | `tools\package.ps1` → `build-release/`, `dist/VocalEQQ-<Version>-win64.zip` |
+| Neue Version veröffentlichen | Checkliste „Pro Release“ in `tooL8/vertrieb/downloads.md` (Tag, `pack-release.py`, `plugins.ts`, Push = Deploy) |
+| Lokal installiert (zum Testen in FL) | `C:\Program Files\Common Files\VST3	ooL8\Vocal EQQ.vst3` — bei neuer Version ersetzen |
 | Oberfläche als PNG | `-DVOCALEQQ_BUILD_SNAPSHOT=ON`, `vocaleqq-snapshot <datei.png> [--bypass]` |
 
 **Oberfläche prüfen ohne Bildschirmzugriff:** `vocaleqq-snapshot` rendert
